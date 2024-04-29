@@ -1,1 +1,169 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include <string>
 
+using namespace std;
+
+void get_input(int& input) {
+    cin >> input;
+    while (input < 1 || input > 3) {
+        cout << "Invalid input. Please enter 1, 2, or 3: ";
+        cin >> input;
+    }
+}
+
+void computerChoice(int& comTurn, string& comPick) {
+    comTurn = (rand() % 3) + 1;
+
+    if (comTurn == 1) {
+        comPick = "Rock";
+    }
+    else if (comTurn == 2) {
+        comPick = "Paper";
+    }
+    else if (comTurn == 3) {
+        comPick = "Scissors";
+    }
+
+    cout << "Computer's pick: " << comPick << endl;
+}
+
+//converting the players decision into strings that will be used for the conditions up ahead.
+void playerChoice(int& plrTurn, string& plrPick) {
+    cout << "Please choose a number 1-3. They each mean Rock, Paper, or Scissors respectively." << endl;
+    get_input(plrTurn);
+
+    if (plrTurn == 1) {
+        plrPick = "Rock";
+    }
+    else if (plrTurn == 2) {
+        plrPick = "Paper";
+    }
+    else if (plrTurn == 3) {
+        plrPick = "Scissors";
+    }
+
+
+    if (plrPick == "Rock") {
+        cout << "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW" << endl;
+        cout << "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW" << endl;
+        cout << "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW" << endl;
+        cout << "WNWWNWWWWWWWWWWWWWWWWWWWWWWWWWWWWWNWWWWWWWWWWNNWWWWWWWWWWWWNWWWWWWWWWNNWWWWWWWWWWWWWWWWWWWWWWWWWWWWW" << endl;
+        cout << "WNWNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNWWNNWNNWWNXKOkddolcclodk0XNWNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN" << endl;
+        cout << "WWWWNNWNNNNNNNNNNNNNNNNNNNNNNNNWNNNNNNNWNKko:'...............;oOXNWNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN" << endl;
+        cout << "WNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNWNWNKkl;...,coxOKKXXXNXX0ko:. .;xXWNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN" << endl;
+        cout << "WNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNKxc...;okKNWMMMWWWMMMMMMMMWXx;  ,kNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN" << endl;
+        cout << "WNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNXOc. .:xKWMMWWMMWNXNWMMMMMMMMMWWNx' .dXNNXXKKXXNWNNNNNNNNNNNNNNNNNNNN" << endl;
+        cout << "WNNNNNNNNNNNNNNNNNNNNNNNNNNNNXx;..;dKWMMMMMMMMMWX00Oxxk0XNWMWWWWWO, .;c;'....':okKNNNNNNNNNNNNNNNNNN" << endl;
+        cout << "NNNNNNNNNNNNNNNNNNNNNNNNNNNXx, .:ONMMMMMMMMMMMMMWWWWKkl:;,;;:::;,'.  .':loddoc,. 'lKNNNNNNNNNNNNNNNN" << endl;
+        cout << "NNNNNNNNNNNNNNNNNNNNNX000KO:..:OWMMMMMMMMMMMMMMMMMMMWWMNKOxolllllodxkKNWMMMMMWN0o. 'kNNNNNNNNNNNNNNN" << endl;
+        cout << "NNNNNNNNNNNNNNNNNN0d;'..... ,kNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWO' 'ONNNNNNNNNNNNNN" << endl;
+        cout << "NNNNNNNNNNNNNNNN0l. 'lxo. .cXWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWx. lNNNNNNNNNNNNNN" << endl;
+        cout << "NNNNNNNNNNNNNNNk' .dXWX: .dNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWMk. lNNNNNNNNNNNNNN" << endl;
+        cout << "NNNNNNNNNNNNNNO' 'OWMNl  oNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWMXc .kNNNNNNNNNNNNNN" << endl;
+        cout << "NNNNNNNNNNNNNK: .kWWMO. :XWWMMMMMMMMWNNXNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWW0: .oXNNNNNNNNNNNNNN" << endl;
+        cout << "NNNNXNNNXXNXNk. :XMMWo .xMW0xdoollc:;'..cKMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWXOo;.  'xKNNNNNNNNNNNNNN" << endl;
+        cout << "NNNNXNNNNNXXNo .dWMMX: '0MNd.....',;:cldONMMMMMMMMMMMMMMMMMMMMMMMMMMMWN0koc,...,::,..'dKNXNNNNNNNNNN" << endl;
+        cout << "NNNNXNNXNNXNX: .kMWMK, ;KMWNXKXXNNWWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWXOxoc:cloxOXWWWN0l. ;0NXXNNNXXNNN" << endl;
+        cout << "NXNXXXXXXXXNK, '0MMM0' :XMWWWWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNNNWWMMMMMMMMMMMWWx. :0NXXXXXNXXX" << endl;
+        cout << "NXXXXXXXXXXN0, '0MMM0' :XMMXd:ccllooooooooooooxXMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWMWo .oXXXNXXNXXX" << endl;
+        cout << "NXXXXXXXXXXX0; .OMMMK, ;XWMXd;,,''............;0MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWMMk. ;KNXXXXXXXX" << endl;
+        cout << "NXXXXXXXXXXXXc .kMMMX: '0MMMWWWWNNNXXXXXXXXXXXNWWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMk. :KNXXXXXXXX" << endl;
+        cout << "NXXXXXXXXXXXXx. lNMMWo .kMMMXdldkKNWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWMX: .kXXXXXXXXXX" << endl;
+        cout << "NXXXXXXXXXXXN0; .OWWMk. lNMMKc....';clodxOXWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMW0: .oXXXXXXXXXXX" << endl;
+        cout << "XXXXXXXXXXXXXXx. 'OWMXc .kWWWWX0kdl:,'....;0MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNKOd:. 'xKXXXXXXXXXXX" << endl;
+        cout << "XXXXXXXXXXXXXXXk' .oKW0, 'kWWWMMMMMMWNXK0OKWMMMMMMMMMMMMMMMMMMMMMMMMMMWWXKkdl:,..  .;d0XXXXXXXXXXXXX" << endl;
+        cout << "XXXXXXXXXXXXXXXX0l. .;:.  .lKWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWKkdl:;,,;:ll, .oXXXXXXXXXXXXXXXX" << endl;
+        cout << "XXXXXXXXXXXXXXXXX0dc;,;cc. .oKWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNXXXXXNWWWMX: .xXXXXXXXXXXXXXXXX" << endl;
+        cout << "XXXXXXXXXXXXXXXXXXXXXXXXXXOl. .cONMWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMXl. cKXXXXXXXXXXXXXXXX" << endl;
+        cout << "XXXXXXXXXXXXXXXXXXXXXXXXXXXX0o,..,oOXWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWXx, .o0XXXXXXXXXXXXXXXXX" << endl;
+        cout << "XXXXXXXXXXXXXXXXXXXXXXXKXXXXXXKkc'..':dOKWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNKOd:...cOXXXXXXXXXXXXXXXXXXX" << endl;
+        cout << "XXXXXXXXXXXXXXXXXXXXXXXXKXXXXKKKXKko;....,:oxO0KXNWWWMMMMMMMWWNXX0Oxdl:,...'cd0XXXXXXXXXXXXXXXXXXXXX" << endl;
+        cout << "XXXXKXXXXXXXXXXXXXXXXXXXXKXXKKXKKKKXX0koc;'......',;;:::c::;;,'.......,:ldOKXXKKXXKKKXXXXXXXXXXXXXXX" << endl;
+        cout << "XKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKXKKKXXXK0kxolc:::;,,''',,;::clodxO0KXXXKKKKKKKKKKKKKKKKKKKKKKKKKK" << endl;
+        cout << "XKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKXXXXXXXXKKKKKKKKKXXXXXXKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK" << endl;
+        cout << "XKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK" << endl;
+        cout << "XKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK" << endl;
+        cout << "XKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK" << endl;
+        cout << "KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK" << endl;
+        cout << "KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK" << endl;
+    }
+    cout << "Player's Pick: " << plrPick << endl;
+
+}
+
+//conditions for each scenario. giving the player a point or the computer a point, sometimes resulting in a tie.
+int getGameResults(const string& comPick, const string& plrPick, int& playerScore, int& computerScore) {
+    if (plrPick == comPick) {
+        return 0;
+    }
+
+    if (plrPick == "Scissors" && comPick == "Paper") {
+        playerScore++;
+        return 1;
+    }
+    if (plrPick == "Scissors" && comPick == "Rock") {
+        computerScore++;
+        return -1;
+    }
+    if (plrPick == "Paper" && comPick == "Rock") {
+        playerScore++;
+        return 1;
+    }
+    if (plrPick == "Paper" && comPick == "Scissors") {
+        computerScore++;
+        return -1;
+    }
+    if (plrPick == "Rock" && comPick == "Paper") {
+        computerScore++;
+        return -1;
+    }
+    if (plrPick == "Rock" && comPick == "Scissors") {
+        playerScore++;
+        return 1;
+    }
+
+    return 0;
+}
+
+int main() {
+
+    int comTurn;
+    int plrTurn;
+    string plrPick;
+    string comPick;
+    int playerScore = 0;
+    int computerScore = 0;
+
+    srand(time(NULL));
+
+    while (playerScore < 2 && computerScore < 2) {
+
+        playerChoice(plrTurn, plrPick);
+        computerChoice(comTurn, comPick);
+
+        int result = getGameResults(comPick, plrPick, playerScore, computerScore);
+
+        if (result == 1) {
+            cout << "Player wins!" << endl << endl;
+        }
+        else if (result == -1) {
+            cout << "Computer wins!" << endl << endl;
+        }
+        else if (result == 0) {
+            cout << "It's a tie!" << endl << endl;
+        }
+
+        cout << "Player Score: " << playerScore << endl;
+        cout << "Computer Score: " << computerScore << endl << endl;
+    }
+
+        if (computerScore == 2) {
+            cout << "The Computer wins the game!!" << endl;
+        }
+        else if (playerScore == 2) {
+            cout << "You win the game!!" << endl;
+        }
+    return 0;
+}
